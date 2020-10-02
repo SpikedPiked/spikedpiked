@@ -66,7 +66,7 @@ body {
 </style>
 </head>
 <body>
-<p class="demo" id="demo"><h1 style="color:orange;"><a href="https://spikedpiked.github.io" id="home">SpikedPiked</a></h1>    <a href="/terms.html" id="terms">Terms</a>    <a href="/register.html" id="signup">Sign up</a>    <a href="/signin.html" id="signin">Sign in</a>    <h1 style="color:orange;"></h1></p>
+<p class="demo" id="demo"><h1 style="color:orange;"><a href="https://spikedpiked.github.io" id="home">SpikedPiked</a></h1>    <a href="/terms.html" id="terms">Terms</a>    <a href="/register.html" id="signup">Sign up</a>    <a href="/signin.html" id="signin">Sign in</a>    <a href="forum.html"style="color:red;">Forum</a></p>
 <p></p>
 <noscript>Your browser does not support scripts. Switch to a supported browser.</noscript>
 $if (username !== "")
@@ -78,7 +78,7 @@ $if (username !== "")
     <a href="sign out">Sign Out</a>
   </div>
 </div>
-$endif
+$end if
 <script>
 var home = document.getElementById("home").value;
 var terms = document.getElementById("terms").value;
