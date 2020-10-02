@@ -9,15 +9,86 @@
 <title>SpikedPiked | Home</title>
 <meta name="keywords" content="spiked, piked, spikedpiked, website, helping each other" />
 <style>
-#demo {
+body {
 	background-color: lightgreen;
 }
+.demo {
+	background-color: black;
+	color: white;
+}
+#demo {
+  align-self: left;
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
 </style>
 </head>
 <body>
-<p id="demo" style="background-color:green;"></p>
-<h1 style="color:#ffff00;"><a href="https://spikedpiked.github.io">SpikedPiked</h1>
+<p class="demo" id="demo"><h1 style="color:orange;"><a href="https://spikedpiked.github.io" id="home">SpikedPiked</a></h1>    <a href="/terms.html" id="terms">Terms</a>    <a href="/register.html" id="signup">Sign up</a>    <a href="/signin.html" id="signin">Sign in</a>    <h1 style="color:orange;"></h1></p>
 <p></p>
 <noscript>Your browser does not support scripts. Switch to a supported browser.</noscript>
+$if (username !== "")
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="settings">Settings</a>
+    <a href="profile">Profile</a>
+    <a href="sign out">Sign Out</a>
+  </div>
+</div>
+$endif
+<script>
+var home = document.getElementById("home").value;
+var terms = document.getElementById("terms").value;
+var signup = document.getElementById("signup").value;
+var signin = document.getElementById("signin").value;
+var username = var username;
+if (username !== "") {
+  document.getElementById("signin").innerHTML = username
+  
+}
+</script>
 </body>
 </html>
