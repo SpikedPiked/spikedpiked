@@ -2,7 +2,28 @@
 <html>
 <head>
 <title>SpikedPiked - Register</title>
-<meta name="description" content="Register with SpikedPiked!"
-<input 
+<meta name="description" content="Register with SpikedPiked!" />
 </head>
+<body>
+<form for="register">
+<input style="width:25%"> Username
+<input style="width:25%"> Password
+<input style="width:35%"> Confirm Password
+<input style="width:35%"> Email
+<input type="submit" onClick="myFunction()">
+<p id="demo"></p>
+</form>
+<script>
+function myFunction {
+  var username = document.getElementById("username").value;
+  if (l_username !== username or l_email !== email or c_password !== password) {
+    var l_username = [l_username + username];
+    var l_email = [l_email + email];
+    var l_password = [l_password + password];
+  } else {
+    document.getElementById("demo").innerHTML = "Sorry, but your password is wrong, or your email or username is already here.";
+  }
+}
+</script>
+</body>
 </html>
